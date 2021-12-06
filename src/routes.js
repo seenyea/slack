@@ -8,18 +8,12 @@ const LoginPage = lazy(() => import('./login/index'));
 
 //业务页面
 const IndexPage = lazy(() => import('./pages/index'));
-const ListPage = lazy(() => import('./pages/list/index'));
 
 const RouteMaps =  [
     {
         name: 'IndexPage',
         path: '/',
         component: IndexPage,
-    },
-    {
-        name: 'ListPage',
-        path: '/listview',
-        component: ListPage,
     },
     {
         name: 'NoFoundPage',

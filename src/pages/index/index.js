@@ -1,31 +1,103 @@
 
 import React from "react";
 import BasePage from '@components/basepage';
-import { Layout, Menu, Breadcrumb } from '@components/uis';
+import { Layout, Menu, Breadcrumb, Select, Input, Button } from '@components/uis';
+
+import PraiseCard from './components/basic/praisecard';
+import { initSocket, getpraiselists, getUserName, setUserName } from './business';
+
 const { Header, Content, Footer } = Layout;
 import "@static/pages/index.less";
 
 export default class IndexPage extends BasePage {
+    constructor(porps){
+        super(porps);
+        this.socket = null;
+        this.state = {
+            userName: getUserName(),
+            userLists: [
+                'admin'
+            ],
+            command: 'appenpraise',
+            bottonText: 'To Wall',
+            name: '',
+            desc: '',
+            lists: []
+        }
+    }
+
+    componentDidMount(){
+        getpraiselists().then(data => {
+            const {
+                lists
+            } = data;
+            this.socket = initSocket({
+                url: 'http://127.0.0.1:3000', 
+                context: this
+            });
+            this.setState({lists, userLists: ['admin', ...lists.map(e => e.name)]});
+        })
+    }
+
     render() {
+        const { lists, command, bottonText, name, desc, userName, userLists } = this.state;
         return <Layout className="layout">
-            <Header>
-                <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                    {new Array(15).fill(null).map((_, index) => {
-                        const key = index + 1;
-                        return <Menu.Item key={key}>{`nav ${key}`}</Menu.Item>;
-                    })}
-                </Menu>
+            <Header style={{ textAlign: 'center', position: 'fixed', top: 0, width: '100%', zIndex: 100 }}>
+                <div style={{textAlign: 'center', color: '#fff', fontSize: 30}}>
+                    Praise Wall
+                </div>
             </Header>
-            <Content style={{ padding: '0 50px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>List</Breadcrumb.Item>
-                    <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
-                <div className="site-layout-content">Content</div>
+            <Content style={{ padding: '90px 50px' }}>
+                <div className="site-layout-content">
+                    {lists.map((list, index) => {
+                        const { name, desc, avatarSrc = null } = list;
+                        return <PraiseCard key={index} name={name} desc={desc} avatarSrc={avatarSrc} />
+                    })}
+                </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer style={{ textAlign: 'center', position: 'fixed', bottom: 0, width: '100%' }}>
+                <Input.Group compact>
+                    <Select value={userName} style={{width: 100, marginRight: 30}} onChange={value => {
+                        this.setState({
+                            userName: value
+                        }, () => {
+                            setUserName(value);
+                        });
+                    }}>
+                        {userLists.map((value, index) => {
+                            return <Option key={index} value={value}>{value}</Option>
+                        })}
+                    </Select>
+                    {userName === 'admin' ? <Select value={command} style={{width: 200}} onChange={value => {
+                        this.setState({
+                            command: value,
+                            bottonText: value === 'appenpraise' ? 'To Wall' : 'Praise'
+                        });
+                    }}> 
+                        <Option value="appenpraise">Appenpraise</Option>
+                        <Option value="praise">Praise</Option>
+                    </Select> : null}
+                    {userName === 'admin' ? <Input style={{width: 100}} value={name} placeholder="input name" onChange={e => {
+                        this.setState({
+                            name: e.target.value
+                        });
+                    }} /> : null}
+                    {userName === 'admin' ? <Input style={{width: 400}} value={desc} placeholder="did something great! Congratulations to him!" onChange={e => {
+                        this.setState({
+                            desc: e.target.value
+                        });
+                    }} /> : null}
+                    {userName === 'admin' ? <Button type="primary" onClick={() => {
+                        if(this.socket){
+                            if(name){
+                                const evtName = command === 'appenpraise' ? 'add somebody' : 'praise somebody';
+                                const data = {command, name, desc};
+                                this.socket.emit(evtName, {data});
+                            }
+                        }
+                    }}>{bottonText}</Button> : null}
+                </Input.Group>
+            </Footer>
         </Layout>
     }
 }

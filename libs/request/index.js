@@ -1,6 +1,6 @@
 import request from 'umi-request';
 import { logError, logInfo } from '@libs/trace';
-import { fail } from '@components/uis/notice'
+import { fail } from '@components/notice'
 /**
  * 通用请求接口
  * @param {string} url 

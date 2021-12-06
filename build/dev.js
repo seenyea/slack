@@ -1,5 +1,5 @@
 const base = require('./base');
-const port = 8900;  //默认服务端口
+const port = 9000;  //默认服务端口
 const { proxy } = require('../devconfig/apiproxy');
 const mockData = require('../devconfig/mockdata');
 var fs = require('fs'); //文件模块

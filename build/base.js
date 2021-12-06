@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CpWebpackPlugin = require('cp-webpack-plugin');
 
-const projectName = `your name`;   //项目名称
+const projectName = `Slack`;   //项目名称
 
 module.exports = {
     entry: {
