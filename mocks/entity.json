@@ -1,0 +1,565 @@
+{
+    "code": 0,
+    "msg": "",
+    "data": [
+        {
+            "element": {
+                "id": "node1",
+                "nameSpace": "test",
+                "name": "emp",
+                "displayName": "员工",
+                "type": 1,
+                "description": "记录员工信息",
+                "displayPropertyKey": "name",
+                "displayPropertyId": "",
+                "fromElementId": "",
+                "toElementId": "",
+                "x": 150,
+                "y": 150
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "姓名",
+                    "isSystem": false,
+                    "type": {
+                        "name": "name",
+                        "type": "string",
+                        "length": 20,
+                        "decimalPrecision": 0,
+                        "description": "员工姓名",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "无名氏"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "手机号",
+                    "isSystem": false,
+                    "type": {
+                        "name": "phoneNum",
+                        "type": "string",
+                        "length": 11,
+                        "decimalPrecision": 0,
+                        "description": "员工手机号",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "暂时没有收集邮箱~~"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "邮箱",
+                    "isSystem": false,
+                    "type": {
+                        "name": "email",
+                        "type": "string",
+                        "length": 20,
+                        "decimalPrecision": 0,
+                        "description": "员工邮箱",
+                        "isPrimary": false,
+                        "isUnique": true,
+                        "defaultValue": "暂时没有收集邮箱~~"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "入职时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "hiredate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "入职时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-06-23 16:45:54"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "薪资",
+                    "isSystem": false,
+                    "type": {
+                        "name": "salary",
+                        "type": "bigdecimal",
+                        "length": 20,
+                        "decimalPrecision": 2,
+                        "description": "月薪",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "0"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "在试用期",
+                    "isSystem": false,
+                    "type": {
+                        "name": "onProbation",
+                        "type": "boolean",
+                        "length": 2,
+                        "decimalPrecision": 0,
+                        "description": "是否在试用期",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": ""
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "node1",
+                "nameSpace": "test",
+                "name": "emp1",
+                "displayName": "XXX",
+                "type": 1,
+                "description": "记录员工信息",
+                "displayPropertyKey": "name",
+                "displayPropertyId": "",
+                "fromElementId": "",
+                "toElementId": "",
+                "x": 150,
+                "y": 150
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "姓名",
+                    "isSystem": false,
+                    "type": {
+                        "name": "name",
+                        "type": "string",
+                        "length": 20,
+                        "decimalPrecision": 0,
+                        "description": "员工姓名",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "无名氏"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "手机号",
+                    "isSystem": false,
+                    "type": {
+                        "name": "phoneNum",
+                        "type": "string",
+                        "length": 11,
+                        "decimalPrecision": 0,
+                        "description": "员工手机号",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "暂时没有收集邮箱~~"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "邮箱",
+                    "isSystem": false,
+                    "type": {
+                        "name": "email",
+                        "type": "string",
+                        "length": 20,
+                        "decimalPrecision": 0,
+                        "description": "员工邮箱",
+                        "isPrimary": false,
+                        "isUnique": true,
+                        "defaultValue": "暂时没有收集邮箱~~"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "入职时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "hiredate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "入职时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-06-23 16:45:54"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "薪资",
+                    "isSystem": false,
+                    "type": {
+                        "name": "salary",
+                        "type": "bigdecimal",
+                        "length": 20,
+                        "decimalPrecision": 2,
+                        "description": "月薪",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "0"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "在试用期",
+                    "isSystem": false,
+                    "type": {
+                        "name": "onProbation",
+                        "type": "boolean",
+                        "length": 2,
+                        "decimalPrecision": 0,
+                        "description": "是否在试用期",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": ""
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "node2",
+                "nameSpace": "test",
+                "name": "dept",
+                "displayName": "部门",
+                "type": 1,
+                "description": "记录部门信息",
+                "displayPropertyKey": "name",
+                "displayPropertyId": "",
+                "fromElementId": "",
+                "toElementId": "",
+                "x": 150,
+                "y": 350
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "部门名称",
+                    "isSystem": false,
+                    "type": {
+                        "name": "name",
+                        "type": "string",
+                        "length": 20,
+                        "decimalPrecision": 0,
+                        "description": "部门名称",
+                        "isPrimary": false,
+                        "isUnique": true,
+                        "defaultValue": "无名部门"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "成立时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "establishedTime",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "部门成立时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "edge1",
+                "fromElementId": "emp",
+                "toElementId": "dept",
+                "nameSpace": "test",
+                
+                "name": "emp_dept_belong",
+                "displayName": "属于",
+                "type": 3,
+                "description": "员工部门关系-属于",
+                "displayPropertyKey": "joinDate",
+                "displayPropertyId": "",
+                "style": {
+                    "stroke": "#999999",
+                    "endArrow": {
+                      "fill":"#999999"
+                    }
+                  }
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "加入时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "joinDate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工加入该部门的时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "员工id",
+                    "isSystem": false,
+                    "type": {
+                        "name": "empId",
+                        "type": "string",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工id",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "------"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "部门id",
+                    "isSystem": false,
+                    "type": {
+                        "name": "deptId",
+                        "type": "string",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "部门id",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "------"
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "edge2",
+                "fromElementId": "emp",
+                "toElementId": "emp",
+                "nameSpace": "test",
+                "name": "emp_emp_friend",
+                "displayName": "朋友",
+                "type": 3,
+                "description": "员工之间关系-朋友",
+                "displayPropertyKey": "beginDate",
+                "displayPropertyId": ""
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "开始时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "beginDate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工加入该部门的时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "edge33",
+                "fromElementId": "emp",
+                "toElementId": "emp",
+                "nameSpace": "test",
+                "name": "emp_emp_friend2",
+                "displayName": "朋友朋友朋友",
+                "type": 3,
+                "description": "员工之间关系-朋友",
+                "displayPropertyKey": "beginDate",
+                "displayPropertyId": ""
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "开始时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "beginDate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工加入该部门的时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "edge2",
+                "fromElementId": "emp",
+                "toElementId": "emp1",
+                "nameSpace": "test",
+                "name": "emp_emp_friend",
+                "displayName": "朋友",
+                "type": 3,
+                "description": "员工之间关系-朋友",
+                "displayPropertyKey": "beginDate",
+                "displayPropertyId": ""
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "开始时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "beginDate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工加入该部门的时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "edge2",
+                "fromElementId": "emp",
+                "toElementId": "emp1",
+                "nameSpace": "test",
+                "name": "emp_emp_friend",
+                "displayName": "朋友",
+                "type": 3,
+                "description": "员工之间关系-朋友",
+                "displayPropertyKey": "beginDate",
+                "displayPropertyId": ""
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "开始时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "beginDate",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工加入该部门的时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                }
+            ]
+        },
+        {
+            "element": {
+                "id": "node3",
+                "nameSpace": "test",
+                "name": "attendance",
+                "displayName": "考勤记录表",
+                "type": 2,
+                "description": "员工打卡记录表",
+                "displayPropertyKey": "recordId",
+                "displayPropertyId": "",
+                "x": 350,
+                "y": 150
+            },
+            "properties": [
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "记录id",
+                    "isSystem": false,
+                    "type": {
+                        "name": "recordId",
+                        "type": "string",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "记录id",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "没有记录id"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "打卡时间",
+                    "isSystem": false,
+                    "type": {
+                        "name": "attendanceTime",
+                        "type": "localdatetime",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工打卡的时间",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "2021-01-01 00:00:00"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "员工id",
+                    "isSystem": false,
+                    "type": {
+                        "name": "empInfo",
+                        "type": "reference",
+                        "length": 30,
+                        "decimalPrecision": 0,
+                        "description": "员工信息",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "G***T",
+                        "embeddedEntityKey": "emp"
+                    }
+                },
+                {
+                    "id": "",
+                    "elementId": "",
+                    "displayName": "备注",
+                    "isSystem": false,
+                    "type": {
+                        "name": "remark",
+                        "type": "string",
+                        "length": 255,
+                        "decimalPrecision": 0,
+                        "description": "备注",
+                        "isPrimary": false,
+                        "isUnique": false,
+                        "defaultValue": "OPQSlala",
+                        "embeddedEntityKey": ""
+                    }
+                }
+            ]
+        }
+    ]
+}
