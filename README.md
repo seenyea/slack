@@ -12,7 +12,10 @@
 #### Run local dev server
 ```
 step 1: clone backend server
-git clone https://github.com/seenyea/asnycmessage.git
+a. git clone https://github.com/seenyea/asnycmessage.git
+b. enter asnycmessage
+c. yarn install
+d. node index
 
 step 2: run this project
 yarn dev
